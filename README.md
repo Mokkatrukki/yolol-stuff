@@ -18,11 +18,12 @@ aluksenkulma=ATAN((rangefinderkeula-rangefinderpera)/aluksenpituus)
 Laskettu toimivaksi kumman arvon tahansa olevan pidempi esim2:
 ```
 aluksenpituus=10
-rfpera=15 //rangefinderpera
-rfkeula=12 //rangefinderkeula
-
-if rfpera<rfkeula then rferotus=rfkeula-rfpera else rferotus=rfpera-rfkeula end
+rfpera=12 //rangefinderpera
+rfkeula=15 //rangefinderkeula
+rferotus=ABS(rfkeula-rfpera)
+if rfpera<rfkeula then lyhinmatka=rfpera else lyhinmatka=rfkeula end
 aluksenkulma=ATAN(rferotus/aluksenpituus)
+
 
 ```
 Todellinen matka alustaan saadaan laskettua kulman ja  lyhyemmän arvon avulla:
@@ -41,10 +42,11 @@ todellinenetaisyys=COS aluksenkulma * rangefinderpera
 Laskettu toimivaksi kumman arvon tahansa olevan pidempi esim2:
 ```
 aluksenpituus=10
-rfpera=15 //rangefinderpera
-rfkeula=12 //rangefinderkeula
-
-if rfpera<rfkeula then rferotus=rfkeula-rfpera lyhinmatka=rfpera else rferotus=rfpera-rfkeula lyhinmatka=rfkeula end
+rfpera=12 //rangefinderpera
+rfkeula=15 //rangefinderkeula
+rferotus=ABS(rfkeula-rfpera)
+if rfpera<rfkeula then lyhinmatka=rfpera else lyhinmatka=rfkeula end
 aluksenkulma=ATAN(rferotus/aluksenpituus)
 todellinenetaisyys=COS aluksenkulma * lyhinmatka
+
 ```
