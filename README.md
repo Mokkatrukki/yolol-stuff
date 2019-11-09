@@ -69,54 +69,54 @@ sijoitetaan peräkkäin 15 8 3:
 Tämä voidaan tehdä laskemalla:
 ajatellaan luvut slotteina slot1|slot2|slot3
 ```
-slot1|slot2|slot3
+slot3|slot2|slot1
 1111 |1000 |0011
 ```
 15 pitää siirtää 8 bittiä
 8 pitää siirtää 4 bittiä
 3 ei tarvitse siirtää
 ```
-slot1kerroin=2^8 
+slot3kerroin=2^8 
 slot2kerroin=2^4
-slot1=slot1kerroin*15        // 111100000000
+slot3=slot3kerroin*15        // 111100000000
 slot2=slot2kerroin*8         //     10000000
-slot3=3                      //         0011
+slot1=3                      //         0011
 kokoluku=slot1+slot2+slot3   // 111110000011
 ```
-slot3:
+slot1:
 otetaan 4 viimeisintä bittiä jakojäännöksellä
 ```
 
 kokoluku=3971
 slot2kerroin=2^4
-slot3= kokoluku%slot2kerroin
+slot1= kokoluku%slot2kerroin
 
 ```
 
 
 slot2:
-otetaan 8 viimeisintä bittiä jakojäännöksellä, jonka jälkeen pitää vielä ottaa slot3 pois ja poistaa ylimääräiset bitit jakamalla
+otetaan 8 viimeisintä bittiä jakojäännöksellä, jonka jälkeen pitää vielä ottaa slot1 pois ja poistaa ylimääräiset bitit jakamalla
 ```
 kokoluku=3971
-slot1kerroin=2^8
+slot3kerroin=2^8
 slot2kerroin=2^4
-slot3= kokoluku%slot2kerroin
+slot1= kokoluku%slot2kerroin
 slot2= kokoluku%slot1kerroin              // 10000011
 slot2= slot2-slot3                        // 10000000
 slot2=slot2/slot2kerroin                  // 1000
 ```
-slot1 poistetaan 8 viimeisintä bittiä
+slot3 poistetaan 8 viimeisintä bittiä
 ```
-slot1kerroin=2^8 
+slot3kerroin=2^8 
 kokoluku=3971
-slot1=kokoluku-kokoluku%slot1kerroin      //111100000000
-slot1= slot1/slot1kerroin                 //1111
+slot3=kokoluku-kokoluku%slot1kerroin      //111100000000
+slot3= slot3/slot3kerroin                 //1111
 ```
 
 Pienimuoto jossa luvut laitetaan yhteen ja puretaan toisiin muuttujiin:
 ```
-l1=15 l2=8 l3=3 s1=2^8 s2=2^4 k=l3+l2*s2+l1*s1
+l3=15 l2=8 l1=3 s3=2^8 s2=2^4 k=l1+l2*s2+l3*s3
 //uusiin muuttujiin
-n1=(k-k%s1)/s1 n3=k%s2 n2=(k%s1-n3)/s2
+n3=(k-k%s3)/s3 n1=k%s2 n2=(k%s1-n1)/s2
 ```
 
