@@ -55,8 +55,7 @@ todellinenetaisyys=COS aluksenkulma * lyhinmatka
 Koska starbasessa numerot ovat "64-bit fixed-point decimals" tämä tarkoittaa että voidaan säilöä arvoja numeroihin bitin avulla:
 207125762626206225 = `1011011111110110111100100010100001001010101011101000010001`
 
-Sijoittaminen numeroon:
-Sijoitetaan 4bittiset numerot 15 8 3 peräkkäin
+Sijoitetaan 4bittiset numerot:
 ```
 numerot:
 15 = 1111
@@ -67,6 +66,21 @@ sijoitetaan peräkkäin 15 8 3:
 ```
 111110000011 = 3971
 ```
-
+Tämä voidaan tehdä laskemalla:
+ajatellaan luvut slotteina slot1|slot2|slot3
+```
+1111|1000|0011
+```
+15 pitää siirtää 8 bittiä
+8 pitää siirtää 4 bittiä
+3 ei tarvitse siirtää
+```
+slot1kerroin=2^8 
+slot2kerroin=2^4
+slot1=slot1kerroin*15   // 111100000000
+slot2=slot2kerroin*8    //     10000000
+slot3=3                 //         0011
+slot=slot1+slot2+slot3  // 111110000011
+```
 
 
