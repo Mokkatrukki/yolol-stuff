@@ -51,9 +51,22 @@ todellinenetaisyys=COS aluksenkulma * lyhinmatka
 
 ```
 
-#binaari-funktiot
+# binaari-funktiot
 Koska starbasessa numerot ovat "64-bit fixed-point decimals" tämä tarkoittaa että voidaan säilöä arvoja numeroihin bitin avulla:
 207125762626206225 = `1011011111110110111100100010100001001010101011101000010001`
-jos käytämme 4 viimeistä bittiä operaattoreihin ja ehtojen tekemiseen. eli tässä tapauksessa:
-`101101111111011011110010001010000100101010101110100001 0001`  eli `0001` = 1
+
+Sijoittaminen numeroon:
+Sijoitetaan 4bittiset numerot 15 8 3 peräkkäin
+```
+numerot:
+15 = 1111
+8 = 1000
+3 = 0011
+```
+sijoitetaan peräkkäin 15 8 3:
+```
+111110000011 = 3971
+```
+
+
 
