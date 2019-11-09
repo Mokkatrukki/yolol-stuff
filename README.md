@@ -69,7 +69,8 @@ sijoitetaan peräkkäin 15 8 3:
 Tämä voidaan tehdä laskemalla:
 ajatellaan luvut slotteina slot1|slot2|slot3
 ```
-1111|1000|0011
+slot1|slot2|slot3
+1111 |1000 |0011
 ```
 15 pitää siirtää 8 bittiä
 8 pitää siirtää 4 bittiä
