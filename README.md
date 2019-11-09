@@ -10,12 +10,11 @@ esim1:
 aluksenpituus=10
 rangefinderpera=12
 rangefinderkeula=15
-//HOX: keulan pitää olla suurempi kuin perän että toimii
+//HOX: rangefinderkeulan pitää olla suurempi kuin perän että toimii
 kulma=ATAN((rangefinderkeula-rangefinderpera)/aluksenpituus)
 
 ```
-
-laskettu automaattisesti esim2:
+Laskettu toimivaksi kumman arvon tahansa olevan pidempi esim2:
 ```
 aluksenpituus=10
 rfpera=15 //rangefinderpera
