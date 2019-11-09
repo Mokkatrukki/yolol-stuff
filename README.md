@@ -50,3 +50,10 @@ aluksenkulma=ATAN(rferotus/aluksenpituus)
 todellinenetaisyys=COS aluksenkulma * lyhinmatka
 
 ```
+
+#binaari-funktiot
+Koska starbasessa numerot ovat "64-bit fixed-point decimals" tämä tarkoittaa että voidaan säilöä arvoja numeroihin bitin avulla:
+207125762626206225 = `1011011111110110111100100010100001001010101011101000010001`
+jos käytämme 4 viimeistä bittiä operaattoreihin ja ehtojen tekemiseen. eli tässä tapauksessa:
+`101101111111011011110010001010000100101010101110100001 0001`  eli `0001` = 1
+
