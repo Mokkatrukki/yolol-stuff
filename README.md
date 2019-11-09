@@ -78,10 +78,10 @@ slot1|slot2|slot3
 ```
 slot1kerroin=2^8 
 slot2kerroin=2^4
-slot1=slot1kerroin*15   // 111100000000
-slot2=slot2kerroin*8    //     10000000
-slot3=3                 //         0011
-kokoluku=slot1+slot2+slot3  // 111110000011
+slot1=slot1kerroin*15        // 111100000000
+slot2=slot2kerroin*8         //     10000000
+slot3=3                      //         0011
+kokoluku=slot1+slot2+slot3   // 111110000011
 ```
 slot3:
 otetaan 4 viimeisintä bittiä jakojäännöksellä
