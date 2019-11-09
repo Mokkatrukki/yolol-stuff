@@ -113,7 +113,7 @@ slot1=kokoluku-kokoluku%slot1kerroin      //111100000000
 slot1= slot1/slot1kerroin                 //1111
 ```
 
-Pienimuoto:
+Pienimuoto jossa luvut laitetaan yhteen ja puretaan toisiin muuttujiin:
 ```
 l1=15 l2=8 l3=3 s1=2^8 s2=2^4 k=l3+l2*s2+l1*s1
 //uusiin muuttujiin
