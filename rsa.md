@@ -10,3 +10,11 @@ if 0==b%2 then b/=2 else if a>b then a=(a-b)/2 else b=(b-a)/2 end end goto 3
 
 g= a vastaus="g= "+g+" b= "+b+" d="+d
 ```
+
+privatekeyn laskeminen:
+```
+p=11 q=3 n=p*q phi=(p-1)*(q-1) e=3
+if (1%phi)==(d*e)%phi then goto 4 else d++  goto 2 end
+
+answer="publickey("+n+","+e+")"+"privatekey("+n+","+d+")"
+```
