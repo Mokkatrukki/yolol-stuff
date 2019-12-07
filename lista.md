@@ -65,3 +65,26 @@ r=3 l=0 ke=k%2^r k-=(k%2^(r+1)) k+=ke+l*2^r
 
 answer=k //10111 = 23
 ```
+
+```
+p=1 v=0 k=0 memstart=7 f=9
+t=k s=0 v++
+o=t%2 if (f!=s and o==p) then t=(t-o)/2 s++ goto 3 end
+if f==s then goto 19 end
+r=s l=p ke=k%2^r k-=(k%2^(r+1)) k+=ke+l*2^r
+goto s+memstart
+if p then m0=v else v=m0 m0="" end goto 2
+if p then m1=v else v=m1 m1="" end goto 2
+if p then m2=v else v=m2 m2="" end goto 2
+if p then m3=v else v=m3 m3="" end goto 2
+if p then m4=v else v=m4 m4="" end goto 2
+if p then m5=v else v=m5 m5="" end goto 2
+if p then m6=v else v=m6 m6="" end goto 2
+if p then m7=v else v=m7 m7="" end goto 2
+if p then m8=v else v=m8 m8="" end goto 2
+
+
+
+if p then p=0 else p=1 end
+list=m0+m1+m2+m3+m4+m5+m6+m7+m8 goto 2
+```
