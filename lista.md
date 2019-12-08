@@ -88,3 +88,12 @@ if p then m8=v else v=m8 m8="" end goto 2
 if p then p=0 else p=1 end
 list=m0+m1+m2+m3+m4+m5+m6+m7+m8 goto 2
 ```
+
+optimointia:
+```
+p=1 t=469762047 s=0
+halft=t%2^15 if halft==32767 then t=(t-halft)/2^15 s=15 end
+o=t%2 if o==p then t=(t-o)/2 s++ goto 2 end
+
+vastaus=s
+```
