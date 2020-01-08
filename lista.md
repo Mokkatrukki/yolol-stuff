@@ -97,3 +97,30 @@ o=t%2 if o==p then t=(t-o)/2 s++ goto 2 end
 
 vastaus=s
 ```
+
+
+Etsimistä:
+
+```
+k=11 p=0 q=10 memstart=17 f=4 m0="kissa" m1="koira" m3="pieru"
+t=k s=0  
+o=t%2 if (f!=s and o==p) then t=(t-o)/2 s++ goto 3 end
+if f==s then goto 19 end
+r=s l=p ke=k%2^r k-=(k%2^(r+1)) k+=ke+l*2^r
+goto s+memstart
+
+
+
+if v=="koira" then goto 12 else goto 2 end
+
+vastaus="loysi koiran rivilta: "+(s+memstart) goto 12
+
+
+
+
+if p then m0=v else v=m0 end goto q
+if p then m1=v else v=m1 end goto q
+if p then m2=v else v=m2 end goto q
+if p then m3=v else v=m3 end goto q
+```
+
