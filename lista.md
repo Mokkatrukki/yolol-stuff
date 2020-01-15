@@ -124,3 +124,11 @@ if p then m2=v else v=m2 end goto q
 if p then m3=v else v=m3 end goto q
 ```
 
+
+wrw:
+```
+p=1 k=0 f=9
+t=k s=0
+o=t%2 if (f!=s and o==p) then t=(t-o)/2 s++ goto 3 end
+t=k%2^s k-=(k%2^(s+1)) k+=t+p*2^s
+```
